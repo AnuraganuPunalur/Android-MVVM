@@ -21,8 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
-
+       
         activityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         linearLayoutManager = LinearLayoutManager(this)
         activityMainBinding.heroRecycler.layoutManager = linearLayoutManager
@@ -36,9 +35,6 @@ class MainActivity : AppCompatActivity() {
                     heroAdapter = HeroAdapter(this@MainActivity, heroList)
                     activityMainBinding.heroRecycler.adapter = heroAdapter
                     heroAdapter.notifyDataSetChanged()
-                }else{
-
-
                 }
             }
 
